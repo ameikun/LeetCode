@@ -25,19 +25,21 @@ public class Solution {
 	
 	
 	
-	//LeetCode5
+	//LeetCode5 边界值没处理好？？
 	public String longestPalindrome(String s) {
 		int maxlen = 0,n,mid = 0;
 		int maxlenl = 0,midl = 0;
 		int len = s.length();
+		if (len == 0 || len == 1) return s;
 		if(len >= 3 && s.charAt(1) == s.charAt(2))
 			midl = 1;
 		for (int i = 1; i < (len - 1); i++) {
 			n=i<(len-i-1)?i:(len-i-1);
-			if(s.charAt(i) == s.charAt(i+1))
+			if(s.charAt(i) == s.charAt(i-1))
 			{
+				maxlenl=1;
 				for (int j = 1; j <= n; j++) {
-					if ((i+j+1)<len && s.charAt(i-j) == s.charAt(i+j+1)) {
+					if ((i+j)<len && (i-j-1)>0&&s.charAt(i+j) == s.charAt(i-j-1)) {
 						if (maxlenl < j ){
 							maxlenl = j;
 							midl = i;
@@ -48,7 +50,7 @@ public class Solution {
 					}
 					}
 				}
-			else {
+			
 				for (int j = 1; j <= n; j++) {
 					if (s.charAt(i-j) == s.charAt(i+j)) {
 						if (maxlen < j ){
@@ -60,7 +62,10 @@ public class Solution {
 						break;
 					}
 				}
-			}	
+				
+		}
+		if (maxlen == 0 && mid == 0&&maxlenl==0&&midl==0) {
+			return s.substring(0,1);
 		}
 		int l1 = maxlen*2+1;
 		int l2 = maxlenl*2+2;
@@ -76,5 +81,28 @@ public class Solution {
 		}
 		
 	}
+	
+	//leetcod5动态规划方法
+	public String longestPalindrome2(String s) {
+	       if(s.length()<=1){  
+	            return s;  
+	        }  
+	        int start=0, end=0;  
+	        int maxLen = 0;  
+	        boolean[][] plain = new boolean[s.length()][s.length()];  
+	        for(int i=s.length()-1;i>=0;i--){  
+	            for(int j=i;j<s.length();j++){  
+	                if(s.charAt(i)==s.charAt(j)&&(j-i<=2||plain[i+1][j-1])){  
+	                    plain[i][j]=true;  
+	                    if(maxLen<j-i+1){  
+	                        maxLen = j-i+1;  
+	                        start = i;  
+	                        end = j;  
+	                    }  
+	                }  
+	            }  
+	        }  
+	        return s.substring(start, end+1);  
+	    }
 
 }

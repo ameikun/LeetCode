@@ -16,9 +16,9 @@ public class LeetCode22 {
 		for (int i = 0; i < result.size(); i++) {
 			System.out.println(result.get(i));
 		}*/
-		String string = "cbb";
+		String string = "bbd";
 		//solution.longestPalindrome(string);
-		System.out.println(solution.longestPalindrome(string));
+		System.out.println(solution.longestPalindrome2(string));
 
 	}
 
