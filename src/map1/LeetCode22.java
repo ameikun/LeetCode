@@ -4,6 +4,7 @@ import java.awt.Container;
 import java.util.ArrayList;
 
 import solution.Containerwater;
+import solution.StringtoInteger;
 import solution.Zigzag;
 
 public class LeetCode22 {
@@ -29,7 +30,12 @@ public class LeetCode22 {
 		
 		//LeetCode11
 		int height[] = {1,2,3,4,5,6,7,8,9,10};
-		System.out.println(container.maxArea(height));
+		//System.out.println(container.maxArea(height));
+		
+		//LeetCode8
+		StringtoInteger stringtoInteger = new StringtoInteger();
+		String str = "-123a45";
+		System.out.println(stringtoInteger.myAtoi(str));
 
 	}
 
