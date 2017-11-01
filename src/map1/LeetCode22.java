@@ -2,8 +2,10 @@ package map1;
 
 import java.awt.Container;
 import java.util.ArrayList;
+import java.util.List;
 
 import solution.Containerwater;
+import solution.PhoneNumber;
 import solution.StringtoInteger;
 import solution.Zigzag;
 
@@ -14,29 +16,41 @@ public class LeetCode22 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<String> result = new ArrayList<String>();
+		
 		Solution solution = new Solution();
-		Zigzag zigzag = new Zigzag();
-		Containerwater container = new Containerwater();
-		/*
+		
+		ArrayList<String> result = new ArrayList<String>();
 		result = solution.generateParenthesis(4);
 		for (int i = 0; i < result.size(); i++) {
-			System.out.println(result.get(i));
-		}*/
-		//String string = "ABCDE";
-		//System.out.println(zigzag.convert(string, 4));;
-		//solution.longestPalindrome(string);
+			//System.out.println(result.get(i));
+		}
+		
+		
+		Zigzag zigzag = new Zigzag();
+		String string = "ABCDE";
+		String con = zigzag.convert(string, 4);
+		//System.out.println(con);
+		solution.longestPalindrome(string);
 		//System.out.println(solution.longestPalindrome2(string));
 		
+		
 		//LeetCode11
+		Containerwater container = new Containerwater();
 		int height[] = {1,2,3,4,5,6,7,8,9,10};
-		//System.out.println(container.maxArea(height));
+		int maxArea = container.maxArea(height);
+		//System.out.println(maxArea);
 		
 		//LeetCode8
 		StringtoInteger stringtoInteger = new StringtoInteger();
 		String str = "-123a45";
-		System.out.println(stringtoInteger.myAtoi(str));
-
+		int re = stringtoInteger.myAtoi(str);
+		//System.out.println(re);
+		
+		
+		//LeetCode17
+		PhoneNumber phoneNumber = new PhoneNumber();
+		List<String> com = phoneNumber.letterCombinations("23");
+		System.out.println(com);
 	}
 
 }
