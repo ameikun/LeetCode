@@ -49,7 +49,7 @@ public class LeetCode22 {
 		
 		//LeetCode17
 		PhoneNumber phoneNumber = new PhoneNumber();
-		List<String> com = phoneNumber.letterCombinations("23");
+		List<String> com = phoneNumber.letterCombinations("234");
 		System.out.println(com);
 	}
 
