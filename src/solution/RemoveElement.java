@@ -10,7 +10,7 @@ public class RemoveElement {
 				continue;
 			}
 		}
-		return len;  
+		return k;  
     }
 
 }

@@ -28,7 +28,7 @@ public class PhoneNumber {
         if(index>=length){  
             String letters = new String(tmp);
             //the system print is designed for testing
-            System.out.println("---"+letters);
+            //System.out.println("---"+letters);
             res.add(letters);  
             return;  //return 返回递归的上一级
         }
@@ -36,7 +36,7 @@ public class PhoneNumber {
         for(int i=0;i<map[digit].length;i++){  
             tmp[index]=map[digit][i];
             //the system print is designed for testing
-            System.out.println(tmp[index]);
+            //System.out.println(tmp[index]);
             getLetterCom(res,index+1,digits,tmp);  
         }  
 	}
