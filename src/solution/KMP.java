@@ -18,6 +18,7 @@ public class KMP {
 		return -1;
 	}
 	
+	//KMP算法
 	public int fastFind(String target,String pattern) {
 		int lent = target.length();
 		int lenp = pattern.length();

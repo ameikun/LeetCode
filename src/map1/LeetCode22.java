@@ -6,6 +6,7 @@ import java.util.List;
 
 import solution.Containerwater;
 import solution.KMP;
+import solution.Permutations;
 import solution.PhoneNumber;
 import solution.StringtoInteger;
 import solution.Zigzag;
@@ -62,7 +63,12 @@ public class LeetCode22 {
 		String patString = "cde";
 		KMP kmp = new KMP();
 		System.out.println("回溯算的的调用："+kmp.BF(tarString, patString));
-		System.err.println(kmp.fastFind(tarString, patString));
+		System.out.println(kmp.fastFind(tarString, patString));
+		
+		//排列
+		int[] nums = {1,2,3};
+		Permutations permutations = new Permutations();
+		System.out.println(permutations.permute(nums));
 	}
 
 }
