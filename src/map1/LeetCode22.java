@@ -1,6 +1,5 @@
 package map1;
 
-import java.awt.Container;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,23 +51,24 @@ public class LeetCode22 {
 		//LeetCode17
 		PhoneNumber phoneNumber = new PhoneNumber();
 		List<String> com = phoneNumber.letterCombinations("234");
-		System.out.println(com);
+		//System.out.println(com);
 		
 		//java的indexOf字符串匹配函数的应用
 		String objString = "abcdefgh";
-		System.out.println("---模式串匹配的开始位置："+objString.indexOf("cde"));
+		//System.out.println("---模式串匹配的开始位置："+objString.indexOf("cde"));
 		
 		//KMP算法的实现
 		String tarString = "abcdefg";
 		String patString = "cde";
 		KMP kmp = new KMP();
-		System.out.println("回溯算的的调用："+kmp.BF(tarString, patString));
-		System.out.println(kmp.fastFind(tarString, patString));
+		//System.out.println("回溯算的的调用："+kmp.BF(tarString, patString));
+		//System.out.println(kmp.fastFind(tarString, patString));
 		
-		//排列
-		int[] nums = {1,2,3};
+		//LeetCode46 排列
+		int[] nums = {1,2,3,4};
 		Permutations permutations = new Permutations();
 		System.out.println(permutations.permute(nums));
+		System.out.println("递归方法的结果："+permutations.permute2(nums));
 	}
 
 }
