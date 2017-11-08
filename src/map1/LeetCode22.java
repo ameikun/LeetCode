@@ -3,6 +3,7 @@ package map1;
 import java.util.ArrayList;
 import java.util.List;
 
+import solution.CombinationSum;
 import solution.Containerwater;
 import solution.KMP;
 import solution.Permutations;
@@ -67,8 +68,13 @@ public class LeetCode22 {
 		//LeetCode46 排列
 		int[] nums = {1,2,3,4};
 		Permutations permutations = new Permutations();
-		System.out.println(permutations.permute(nums));
-		System.out.println("递归方法的结果："+permutations.permute2(nums));
+		//System.out.println(permutations.permute(nums));
+		//System.out.println("递归方法的结果："+permutations.permute2(nums));
+		
+		//LeetCode39
+		int[] candidates = {2,3,6,7};
+		CombinationSum combinationSum = new CombinationSum();
+		System.out.println(combinationSum.combinationSum(candidates, 7));
 	}
 
 }
