@@ -8,6 +8,7 @@ import solution.Containerwater;
 import solution.KMP;
 import solution.Permutations;
 import solution.PhoneNumber;
+import solution.RotateImage;
 import solution.StringtoInteger;
 import solution.Zigzag;
 
@@ -74,7 +75,14 @@ public class LeetCode22 {
 		//LeetCode39
 		int[] candidates = {2,3,6,7};
 		CombinationSum combinationSum = new CombinationSum();
-		System.out.println(combinationSum.combinationSum(candidates, 7));
+		//System.out.println(combinationSum.combinationSum(candidates, 7));
+		
+		//LeetCode48
+		int[][] matrix = {{1,2,3},
+		                  {4,5,6},
+		                  {7,8,9}};
+		RotateImage rotateImage = new RotateImage();
+		rotateImage.rotate(matrix);
 	}
 
 }

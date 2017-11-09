@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * 当要求解的结果是一系列向量的集合时使用dfs搜索记录路径这种方法。
+ * */
 public class CombinationSum {
 	
 	public List<List<Integer>> combinationSum(int[] candidates, int target) {      
