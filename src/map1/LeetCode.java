@@ -1,6 +1,7 @@
 package map1;
 
 import solution.CountandSay;
+import solution.GroupAnagrams;
 
 public class LeetCode {
 
@@ -12,6 +13,10 @@ public class LeetCode {
 		CountandSay countandSay = new CountandSay();
 		int n = 4;
 		System.out.println(countandSay.countAndSay(n));
+		
+		GroupAnagrams groupAnagrams = new GroupAnagrams();
+		String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+		System.out.println(groupAnagrams.groupAnagrams(strs));
 
 	}
 
