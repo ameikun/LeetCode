@@ -21,21 +21,29 @@ public class GroupAnagrams {
 			char[] midchar = strs[i].toCharArray(); 
 			Arrays.sort(midchar);
 			String midString = new String(midchar);
-			System.out.println("---string的结果"+midString);
+			
 			if (map.containsKey(midString)) {
 				map.get(midString).add(strs[i]);
 			}
 			else {
-				List<String> temp = new ArrayList<String >();
-				temp.add(strs[i]);
-				map.put(midString, temp);
+				map.put(midString, new ArrayList<String>());
+				map.get(midString).add(strs[i]);
+				//List<String> temp = new ArrayList<String >();
+				//temp.add(strs[i]);
+				//map.put(midString, temp);
 			}
 		}
-		Iterator iter = (Iterator) map.values().iterator();
+		/*
+		 * Iterator iter = map.values().iterator();
         while(iter.hasNext())
         {
-            List<String> tempList = new ArrayList<String>((ArrayList<String>)iter.next());
-            res.add(tempList);
+        	res.add((List<String>)iter.next());
+            //List<String> tempList = new ArrayList<String>((ArrayList<String>)iter.next());
+            //res.add(tempList);
+        }
+        */
+        for (String s: map.keySet()) {
+            res.add(map.get(s));
         }
 						
 		return res;
