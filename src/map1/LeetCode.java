@@ -4,9 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import solution.CombinationSum;
 import solution.CountandSay;
 import solution.GroupAnagrams;
 import solution.RegularExpressionMatching;
+import solution.ThreeSum;
 
 public class LeetCode {
 
@@ -36,9 +38,14 @@ public class LeetCode {
 		
 		//LeetCode10
 		RegularExpressionMatching regularE = new RegularExpressionMatching();
-		String s = "aab";
-		String p = "ac*a*b";
-		System.out.println(regularE.isMatch(s, p));
+		String s = "aaab";
+		String p = "a*b";
+		//System.out.println(regularE.isMatch(s, p));
+		
+		//LeetCode15
+		ThreeSum threeSum = new ThreeSum();
+		int[] s1 = {-1, 0, 1, 2, -1, -4};
+		System.out.println(threeSum.threeSum(s1));
 
 	}
 
