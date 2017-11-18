@@ -45,7 +45,7 @@ public class LeetCode {
 		//LeetCode15
 		ThreeSum threeSum = new ThreeSum();
 		int[] s1 = {-1, 0, 1, 2, -1, -4};
-		System.out.println(threeSum.threeSum(s1));
+		System.out.println(threeSum.threeSum2(s1));
 
 	}
 

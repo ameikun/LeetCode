@@ -36,17 +36,55 @@ public class ThreeSum {
 			}
 		} else {
 			for (int i = level; i < nums.length; i++) {
-				if (temp.size() == 0 && nums[i]>0) {
+				if (temp.size() == 0 && nums[i] > 0)
 					break;
-				}
 				temp.add(nums[i]);
-				if (sum+nums[i] <= 0) {
+				if (sum + nums[i] <= 0) {
 					findComb(nums, i + 1, sum + nums[i], temp, res);
 				}
 				temp.remove(temp.size() - 1);
 			}
 		}
 
+	}
+
+	// 下面是不超时的算法，时间复杂度为O(n*n)
+	public List<List<Integer>> threeSum2(int[] nums) {
+		List<List<Integer>> sulList = new ArrayList<>();
+		int len = nums.length;
+		if (len < 3)
+			return sulList;
+		Arrays.sort(nums);
+
+		for (int i = 0; i < len; i++) {
+			if (nums[i] > 0)
+				break;
+			if (i > 0 && nums[i] == nums[i - 1])
+				continue;
+			int begin = i + 1, end = len - 1;
+			while (begin < end) {
+				int sum = nums[i] + nums[begin] + nums[end];
+				if (sum == 0) {
+					List<Integer> list = new ArrayList<Integer>();
+					list.add(nums[i]);
+					list.add(nums[begin]);
+					list.add(nums[end]);
+					sulList.add(list);
+					begin++;
+					end--;
+					
+					//the next two while to skip the same number
+					while (begin < end && nums[begin] == nums[begin - 1])
+						begin++;
+					while (begin < end && nums[end] == nums[end + 1])
+						end--;
+				} else if (sum > 0)
+					end--;
+				else
+					begin++;
+			}
+		}
+		return sulList;
 	}
 
 }
