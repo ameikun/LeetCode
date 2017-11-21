@@ -6,6 +6,7 @@ import java.util.Set;
 
 import solution.CombinationSum;
 import solution.CountandSay;
+import solution.FourSum;
 import solution.GroupAnagrams;
 import solution.RegularExpressionMatching;
 import solution.ThreeSum;
@@ -45,7 +46,11 @@ public class LeetCode {
 		//LeetCode15
 		ThreeSum threeSum = new ThreeSum();
 		int[] s1 = {-1, 0, 1, 2, -1, -4};
-		System.out.println(threeSum.threeSum2(s1));
+		//System.out.println(threeSum.threeSum2(s1));
+		
+		FourSum fourSum = new FourSum();
+		int[] S = {1,-2,-5,-4,-3,3,3,5};
+		System.out.println(fourSum.fourSum(S, -11));
 
 	}
 
