@@ -10,6 +10,7 @@ import solution.FourSum;
 import solution.GroupAnagrams;
 import solution.RegularExpressionMatching;
 import solution.ThreeSum;
+import solution.ThreeSumClosest;
 
 public class LeetCode {
 
@@ -50,7 +51,11 @@ public class LeetCode {
 		
 		FourSum fourSum = new FourSum();
 		int[] S = {1,-2,-5,-4,-3,3,3,5};
-		System.out.println(fourSum.fourSum(S, -11));
+		//System.out.println(fourSum.fourSum(S, -11));
+		
+		ThreeSumClosest threeSumClosest = new ThreeSumClosest();
+		int[] c = {1,1,1,1};
+		System.out.println(threeSumClosest.threeSumClosest(c, -100));
 
 	}
 
