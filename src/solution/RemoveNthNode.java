@@ -9,8 +9,8 @@ public class RemoveNthNode {
 			return null;
 		}
 		
-		ListNode q = head;
-		ListNode s = head;
+		ListNode q = head;//快指针
+		ListNode s = head;//慢指针
 		for (int i = 0; i < n; i++) {
 			q = q.next;	
 		}
@@ -23,10 +23,7 @@ public class RemoveNthNode {
 			s = s.next;	
 		}
 		s.next = s.next.next;
-		
-		
-		return s;
-		
+		return head;	
 	}
 
 }
