@@ -40,12 +40,13 @@ public class DivideTwoIntegers {
 			long temp = b;
 
 			/* 3.找到大于被除数的基数 */
-			while (a >= temp<<1) {
+			while (a >= temp<<1) {//while循环里面先判断temp<<1是否大于a，可防止后面溢出后的右移
 				temp <<= 1;
 				cnt <<= 1;
 			}
 			res += cnt;//当cnt=2147483648时，cnt>>1后会出错，cnt变为-1073741824
 			//所以应当禁止溢出后的右移
+			
 			/* 4.减去基数前一个数 */
 			a -= temp;
 		}
