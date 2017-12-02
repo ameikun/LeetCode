@@ -6,6 +6,7 @@ import java.util.Set;
 
 import solution.CombinationSum;
 import solution.CountandSay;
+import solution.DivideTwoIntegers;
 import solution.FourSum;
 import solution.GroupAnagrams;
 import solution.RegularExpressionMatching;
@@ -55,7 +56,13 @@ public class LeetCode {
 		
 		ThreeSumClosest threeSumClosest = new ThreeSumClosest();
 		int[] c = {1,1,1,1};
-		System.out.println(threeSumClosest.threeSumClosest(c, -100));
+		//System.out.println(threeSumClosest.threeSumClosest(c, -100));
+		
+		
+		
+		DivideTwoIntegers divideTwoIntegers = new DivideTwoIntegers();
+		int a = -2147483648, b = 2;
+		System.out.println(divideTwoIntegers.divide(a, b));
 
 	}
 
