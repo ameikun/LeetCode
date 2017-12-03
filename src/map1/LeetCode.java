@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 import solution.CombinationSum;
+import solution.CombinationSumII;
 import solution.CountandSay;
 import solution.DivideTwoIntegers;
 import solution.FourSum;
@@ -62,7 +63,11 @@ public class LeetCode {
 		
 		DivideTwoIntegers divideTwoIntegers = new DivideTwoIntegers();
 		int a = -2147483648, b = 2;
-		System.out.println(divideTwoIntegers.divide(a, b));
+		//System.out.println(divideTwoIntegers.divide(a, b));
+		
+		int cand[] = {10,1,2,7,6,1,5};
+		CombinationSumII combinationSumII = new CombinationSumII();
+		System.out.println(combinationSumII.combinationSum2(cand, 8));
 
 	}
 

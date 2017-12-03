@@ -4,7 +4,14 @@ import map1.TreeNode;
 
 public class MaximumDepthBinaryTree {
 	public int maxDepth(TreeNode root) {
-		int depth = 0;
-		return depth;
+		if (root == null) {
+			return 0;
+		}
+		
+		int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        
+		
+		return Math.max(left, right)+1;
 	}
 }

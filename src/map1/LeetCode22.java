@@ -75,7 +75,7 @@ public class LeetCode22 {
 		//LeetCode39
 		int[] candidates = {2,3,6,7};
 		CombinationSum combinationSum = new CombinationSum();
-		//System.out.println(combinationSum.combinationSum(candidates, 7));
+		System.out.println(combinationSum.combinationSum(candidates, 7));
 		
 		//LeetCode48
 		int[][] matrix = {{1,2,3},
