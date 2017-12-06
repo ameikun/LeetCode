@@ -16,9 +16,10 @@ public class CombinationSumII {
 		
 		combination(res, 0, temp, candidates, 0, target);
 		
-		HashSet<List<Integer>> hashSet = new HashSet<>(res);
-		res.clear();
-		res.addAll(hashSet);//去重
+		//HashSet<List<Integer>> hashSet = new HashSet<>(res);
+		//res.clear();
+		//res.addAll(hashSet);//去重
+		//combinationSum(res, temp, candidates, target, 0);  
 		return res;
 	}
 
@@ -36,14 +37,20 @@ public class CombinationSumII {
 					break;
 				}
 				//去重，但是例如can=[2,2,2],tar=4,无法去掉重复的
-				if(i>0 && cand[i] == cand[i-1]&&temp.size()==0)
-					continue;
+				//if(i>0 && cand[i] == cand[i-1]&&temp.size()==0)
+					//continue;
 				temp.add(cand[i]);
 		    	combination(res, i+1, temp, cand, sum + cand[i], tar);
 		    	temp.remove(temp.size()-1);
+		    	
+		    	//去重一步到位
+		    	while(i < cand.length-1 && cand[i] == cand[i+1]){  
+                    i++;  
+                }  
 			}	
 		}
 		return ;
 	}
-
+	
+	
 }

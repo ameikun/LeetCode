@@ -43,6 +43,7 @@ public class ThreeSum {
 					findComb(nums, i + 1, sum + nums[i], temp, res);
 				}
 				temp.remove(temp.size() - 1);
+			
 			}
 		}
 

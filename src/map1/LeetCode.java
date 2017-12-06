@@ -49,7 +49,7 @@ public class LeetCode {
 		//LeetCode15
 		ThreeSum threeSum = new ThreeSum();
 		int[] s1 = {-1, 0, 1, 2, -1, -4};
-		//System.out.println(threeSum.threeSum2(s1));
+		System.out.println(threeSum.threeSum2(s1));
 		
 		FourSum fourSum = new FourSum();
 		int[] S = {1,-2,-5,-4,-3,3,3,5};
@@ -67,7 +67,7 @@ public class LeetCode {
 		
 		int cand[] = {10,1,2,7,6,1,5};
 		CombinationSumII combinationSumII = new CombinationSumII();
-		System.out.println(combinationSumII.combinationSum2(cand, 8));
+		//System.out.println(combinationSumII.combinationSum2(cand, 8));
 
 	}
 
