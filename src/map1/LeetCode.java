@@ -10,6 +10,7 @@ import solution.CountandSay;
 import solution.DivideTwoIntegers;
 import solution.FourSum;
 import solution.GroupAnagrams;
+import solution.HappyNumber;
 import solution.RegularExpressionMatching;
 import solution.ThreeSum;
 import solution.ThreeSumClosest;
@@ -68,6 +69,10 @@ public class LeetCode {
 		int cand[] = {10,1,2,7,6,1,5};
 		CombinationSumII combinationSumII = new CombinationSumII();
 		//System.out.println(combinationSumII.combinationSum2(cand, 8));
+		
+		int hNumber = 21;
+		HappyNumber ha = new  HappyNumber();
+		System.out.println(ha.isHappy(hNumber));
 
 	}
 
