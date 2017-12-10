@@ -11,6 +11,7 @@ import solution.DivideTwoIntegers;
 import solution.FourSum;
 import solution.GroupAnagrams;
 import solution.HappyNumber;
+import solution.MaximumSubarray;
 import solution.NQueens;
 import solution.RegularExpressionMatching;
 import solution.ThreeSum;
@@ -77,7 +78,10 @@ public class LeetCode {
 		
 		int Q = 5;
 		NQueens nQueens = new NQueens();
-		System.out.println(nQueens.solveNQueens(Q));
+		//System.out.println(nQueens.solveNQueens(Q));
+		int[] subarray ={-2,1,-3,4,-1,2,1,-5,4};
+		MaximumSubarray maximumSubarray = new MaximumSubarray();
+		System.out.println(maximumSubarray.maxSubArray(subarray));
 
 	}
 
