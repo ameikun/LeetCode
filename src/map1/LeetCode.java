@@ -81,7 +81,7 @@ public class LeetCode {
 		//System.out.println(nQueens.solveNQueens(Q));
 		int[] subarray ={-2,1,-3,4,-1,2,1,-5,4};
 		MaximumSubarray maximumSubarray = new MaximumSubarray();
-		System.out.println(maximumSubarray.maxSubArray(subarray));
+		System.out.println(maximumSubarray.maxSubArray2(subarray));
 
 	}
 
