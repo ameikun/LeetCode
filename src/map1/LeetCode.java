@@ -11,6 +11,7 @@ import solution.DivideTwoIntegers;
 import solution.FourSum;
 import solution.GroupAnagrams;
 import solution.HappyNumber;
+import solution.LongestValidParentheses;
 import solution.MaximumSubarray;
 import solution.NQueens;
 import solution.RegularExpressionMatching;
@@ -81,7 +82,11 @@ public class LeetCode {
 		//System.out.println(nQueens.solveNQueens(Q));
 		int[] subarray ={-2,1,-3,4,-1,2,1,-5,4};
 		MaximumSubarray maximumSubarray = new MaximumSubarray();
-		System.out.println(maximumSubarray.maxSubArray2(subarray));
+		//System.out.println(maximumSubarray.maxSubArray2(subarray));
+		
+		String parentheses = "())()()";
+		LongestValidParentheses parentheses2 = new LongestValidParentheses();
+		System.out.println(parentheses2.longestValidParentheses(parentheses));
 
 	}
 
