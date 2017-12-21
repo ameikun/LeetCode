@@ -48,6 +48,7 @@ public class LongestValidParentheses {
 		int len = s.length();
         if(len <= 1) return 0;
         int curMax = 0;
+        //for any longest[i], it stores the longest length of valid parentheses which is end at i.
         int[] longest = new int[len];
         
         for(int i=1; i < len; i++){
