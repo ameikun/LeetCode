@@ -17,6 +17,7 @@ import solution.NQueens;
 import solution.RegularExpressionMatching;
 import solution.ThreeSum;
 import solution.ThreeSumClosest;
+import solution.UniquePathsII;
 
 public class LeetCode {
 
@@ -86,7 +87,14 @@ public class LeetCode {
 		
 		String parentheses = "())()()";
 		LongestValidParentheses parentheses2 = new LongestValidParentheses();
-		System.out.println(parentheses2.longestValidParentheses(parentheses));
+		//System.out.println(parentheses2.longestValidParentheses(parentheses));
+		
+		int[][] te = {{0,0,0},
+                {0,1,0},
+                {0,0,0}};
+		int[][] te2 = {};
+		UniquePathsII  uniquePathsII = new UniquePathsII();
+		System.out.println(uniquePathsII.uniquePathsWithObstacles(te));
 
 	}
 
