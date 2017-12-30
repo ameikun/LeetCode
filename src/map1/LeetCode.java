@@ -15,6 +15,7 @@ import solution.LongestValidParentheses;
 import solution.MaximumSubarray;
 import solution.NQueens;
 import solution.RegularExpressionMatching;
+import solution.SearchinRotatedSortedArray;
 import solution.ThreeSum;
 import solution.ThreeSumClosest;
 import solution.UniquePathsII;
@@ -94,7 +95,12 @@ public class LeetCode {
                 {0,0,0}};
 		int[][] te2 = {};
 		UniquePathsII  uniquePathsII = new UniquePathsII();
-		System.out.println(uniquePathsII.uniquePathsWithObstacles(te));
+		//System.out.println(uniquePathsII.uniquePathsWithObstacles(te));
+		
+		
+		int [] ameic = {1,2,3,4,5};
+		SearchinRotatedSortedArray seSortedArray = new SearchinRotatedSortedArray();
+		System.out.println(seSortedArray.search(ameic, 5));
 
 	}
 
