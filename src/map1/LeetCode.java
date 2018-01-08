@@ -99,9 +99,9 @@ public class LeetCode {
 		//System.out.println(uniquePathsII.uniquePathsWithObstacles(te));
 		
 		
-		int [] ameic = {};
+		int [] ameic = {5,7,7,8,8,10};
 		SearchforaRange se = new SearchforaRange();
-		System.out.println(se.searchRange(ameic, 7));
+		System.out.println(se.searchRange(ameic, 8));
 
 	}
 
